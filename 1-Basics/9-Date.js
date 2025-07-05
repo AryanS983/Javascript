@@ -19,9 +19,6 @@ console.log(myCreatedTime.toLocaleString()); // Output: 15/02/2025, 8:10:00 pm
 // As parameter month starts from 0, so 0 is January, 1 is February, and so on.
 // But as string it starts from 1, so 1 is January, 2 is February, and so on.
 
-const mystamp = Date.now(); // Returns the current timestamp in milliseconds
-console.log(mystamp); // Output: Current timestamp in milliseconds since January 1, 1970, 00:00:00 UTC
-
 console.log(myCreatedTime.getTime()); // Output: Timestamp in milliseconds for the specified date and time
 console.log(myCreatedTime.getDay()); // Output: Day of the week (0-6, where 0 is Sunday)
 console.log(myCreatedTime.getDate()); // Output: Day of the month (1-31)
@@ -29,6 +26,12 @@ console.log(myCreatedTime.getMonth()); // Output: Month (0-11, where 0 is Januar
 console.log(myCreatedTime.getFullYear()); // Output: Year (e.g., 2025)
 console.log(myCreatedTime.getHours()); // Output: Hour (0-23)
 console.log(myCreatedTime.getMinutes()); // Output: Minutes (0-59)  
+
+const mystamp = Date.now(); // Returns the current timestamp in milliseconds
+console.log(mystamp); // Output: Current timestamp in milliseconds since January 1, 1970, 00:00:00 UTC
+console.log((new Date(mystamp)).toLocaleString());
+// Output: Current date and time in a human-readable format based on the timestamp
+
 
 
 //customize the date format
