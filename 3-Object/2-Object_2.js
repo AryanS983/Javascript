@@ -22,7 +22,13 @@ const user2 = {
 console.log(user2);
 
 // Accessing nested properties
-console.log(user2.name.fullname.first); // Output: Aryan  (using dot notation)
+// ? is used to check if a property exists on an object or not
+// If the property exists, it will return the value, otherwise it will return undefined
+//Example
+console.log(user2.name?.full?.first); // Output: undefined  
+//  ? operatator is used to avoid error when accessing non-existent properties
+
+console.log(user2.name?.fullname.first); // Output: Aryan  (using dot notation)
 console.log(user2["name"]["fullname"]["last"]); // Output: Shaw  (using square bracket notation)
 
 // Joining objects

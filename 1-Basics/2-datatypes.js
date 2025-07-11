@@ -15,7 +15,9 @@ const bool = true; // Boolean
 const undef = undefined; // Undefined
 const nul = null; // Null
 const sym = Symbol("unique"); // Symbol
-const bigInt = BigInt(12345678901234567890); // BigInt
+const bigInt = 12345678901234567890n; // BigInt
+
+
 
 // 2. Non-Primitive Types
 //    - Object: Represents a collection of key-value pairs, e.g., { name: "John", age: 30 }
