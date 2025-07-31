@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ad or Remove elements from DOM</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="languages">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    function addLanf(langname){
+        const ul = document.querySelector('.languages');
+        const li = document.createElement('li');
+        li.innerHTML = langname;
+        ul.appendChild(li);
+    }
+    addLanf('Python');
+    // good approcah but its not optimized for large number of elements
+    // as each time the append function is called the entire HTML is parsed and re-rendered.
+    
+    function addLanf2(langname){
+        const ul = document.querySelector('.languages');
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langname));
+        ul.appendChild(li);
+    }
+    addLanf2('c++');
+    addLanf2('Ruby');
+    addLanf2('Swift');
+
+    //Edit
+    const element = document.querySelector('.languages>li:nth-child(2)');
+    // element.innerHTML = 'Java';
+    //can also do it using replaceWith
+    const newelement = document.createElement('li')
+    newelement.textContent = 'Java';
+    element.replaceWith(newelement);
+
+    //using outerHTML
+    const element2 = document.querySelector('.languages>li:last-child');
+    element2.outerHTML = '<li>Go</li>';
+
+    //Remove
+    // const element2 = document.querySelector('.languages>li:nth-child(3)');
+    // element2.remove();
+
+
+</script>
+</html>

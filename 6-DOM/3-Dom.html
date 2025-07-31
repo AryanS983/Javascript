@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element creation in DOM</title>
+    <style>
+        .bg-blue{
+            background-color: #04002e;
+            color: #999999;
+        }
+    </style>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <div class="parent">
+        <div class="days">sunday</div>
+        <div class="days">monday</div>
+        <div class="days">tuesday</div>
+        <div class="days">wednesday</div>
+        <div class="days">thrusday</div>
+        <div class="days">friday</div>
+        <div class="days">saturday</div> 
+    </div>
+</body>
+<script>
+    const parent = document.querySelector('.parent');
+    console.log(parent.children);   //HTML collection
+    
+    //we can add regular for loop for an HTML collection
+    for(let i=0 ; i<parent.children.length ; i++){
+        if(i%2)parent.children[i].style.color = "red";
+    }
+    
+    console.log(parent.firstElementChild.innerHTML);
+    console.log(parent.lastElementChild.innerHTML);
+
+    console.log(parent.childNodes); 
+    // newline is counted as a node as well
+    const heading = document.createElement('h2');
+    heading.innerHTML = "Days in a Week";
+    heading.setAttribute('class', 'bg-blue');
+    heading.style.color = "red";
+    heading.style.padding = "10px";
+
+    //adding text without erasing the exiting text as in case of inner HTML
+    const txt = document.createTextNode(" using JS")
+    heading.append(txt);
+    //Can use appendChild as well
+
+    //append int he beginning
+    parent.prepend(heading);
+    // //append at the end
+    // parent.append(heading);
+    // //insert before a particular element
+    // parent.children[2].before(heading);
+    // //insert after a particular element
+    // parent.children[2].after(heading);
+
+    
+</script>
+</html>

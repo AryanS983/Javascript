@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom manipulation</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: #999999;
+        }
+        .bg-blue{
+            background-color: #04002e;
+            color: #999999;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div >
+        <h1 id="title">Dom learning <span hidden>with Hitesh</span></h1>
+        <p id="desc" class="info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis est quaerat nemo sint, placeat quam vero.</p>
+        <input type="text" name="Input" id="input" class="form-control bg-blue" placeholder="Enter your name">
+    </div>
+
+    <div>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <h2>Lorem ipsum dolor </h2>
+        <h2 class="bg-blue">Lorem ipsum.</h2>
+        <h2>Lorem.</h2>
+        <input type="password" name="password" class="bg-blue" placeholder="Enter your password">
+    </div>
+    <div>
+        <ul>
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+        </ul>
+    </div>
+    <script>
+        document.getElementById('desc').innerHTML = "DOM include all the elements of the web page. From window => document => HTML => Body/Head";
+
+        
+        
+    </script>
+    <script src="./2-dom.js"></script>
+</body>
+</html>

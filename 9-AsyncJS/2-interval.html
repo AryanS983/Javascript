@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome to JS Tutorial</h1>
+    <button class="start">Start</button>
+    <button class="stop">Stop</button>
+</body>
+<script>
+    const printdate = (str) =>{
+        console.log(str, Date.now());
+    }
+
+    let interval
+    document.querySelector('.start').addEventListener('click', () => {
+        interval = setInterval(printdate, 2000, 'Hello')
+    })
+
+    document.querySelector('.stop').addEventListener('click', ()=>{
+        clearInterval(interval)
+    })
+</script>
+</html>
